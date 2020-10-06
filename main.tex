@@ -1,0 +1,197 @@
+%% Writing a thesis in LaTeX - http://tug.org/pracjourn/2008-1/mori/mori.pdf
+%\RequirePackage[l2tabu, orthodox]{nag} % tells you of any bad LaTeX usage
+                                       % must be first thing in class (with the exception of comments)
+%% There is one option you should define; oneside or twoside
+%% Use twoside for your viva docs (examiners hate long docs they need to carry around)
+%% and oneside for the final thing you submit to the library.  Note that margins will
+%% change accordingly
+
+\documentclass[twoside]{umCris}  % custom University of Malta project/dissertation/thesis
+\newcommand{\e}[1]{\ensuremath{\times10^{#1}}}
+\newcommand{\mnn}{\ensuremath{^{-1}}}
+\newcommand{\R}{{\large\texttt{R}}}
+\newcommand{\trm}{\texttt{transmem}}
+\newcommand{\includeArticle}[1]{
+  \clearpage
+    {\floatstyle{boxed}
+    \restylefloat{figure}
+    \begin{figure}\centering
+        \includegraphics[width=0.95\textwidth, page = {#1}, trim={1.2cm 1.3cm 1.2cm 1cm}, clip]{App/images/Desalination2020}
+    \end{figure}}}
+\newcommand{\includeManual}[1]{
+  \clearpage
+    {\floatstyle{boxed}
+    \restylefloat{figure}
+    \begin{figure}\centering
+        \includegraphics[width=0.95\textwidth, page = {#1}, trim={1.6cm 1cm 1.6cm 1.5cm}, clip]{App/images/transmem_0.1.0.pdf}
+    \end{figure}}}
+
+
+%\usepackage[sort&compress]{natbib} % SORT Y CONPRESS FEATURE (?)
+
+%% **************** (Your) Packages (Start) ******************
+%\usepackage[spanish]{babel}\decimalpoint
+%\usepackage[utf8]{inputenc} % Non ASCII characters
+\usepackage{graphicx, float, xcolor}
+\usepackage[version=4]{mhchem}
+\usepackage[font=small, skip=3pt]{caption}
+\usepackage{multirow}
+\usepackage{dcolumn} \newcolumntype{d}[1]{D{.}{.}{#1}} %align numbers by decimal dot
+\usepackage{textcomp}%\textregistered\textcopyright
+\usepackage[switch, modulo]{lineno}
+\usepackage{wrapfig}
+\usepackage[percent]{overpic}
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+\usepackage{chemfig}
+    \setchemfig{
+        angle increment=15,
+        atom sep=\bndlen,
+        bond offset=1pt,
+        double bond sep=3pt,
+        cram width=\cramwid,
+        compound sep=5.0em,
+        scheme debug=false,
+        bond join=true,
+        chemfig style={line width=\lnwid},
+        arrow style={line width=\lnwid},
+    }
+
+\newcommand{\bndlen}{2.0em}
+\newcommand{\bndlenshort}{0.5}
+\newcommand{\bndlenshorter}{0.75}
+\newcommand{\bndlenlonger}{1.5}
+\newcommand{\bndlenlong}{1.8}
+\newcommand{\lnwid}{0.7pt}
+\newcommand{\cramwid}{0.3em}
+%\usepackage[dvipsnames]{xcolor} %\colorbox{lightgray}{word}
+
+%Tablas chuscas: https://inf.ethz.ch/personal/markusp/teaching/guides/guide-tables.pdf
+\renewcommand{\arraystretch}{1.2}
+%\begin{tabular}{@{}lll@{}} 
+%Párrafos lindos sin indentar:
+\parskip = 8pt plus 6pt minus 4pt
+\setlength{\parindent}{0em}
+% \listfiles % uncomment this to know which packages you are using
+              % the list of packages will be in the bottom of the .log file
+
+%% Note that packges may already be loaded from the um (and memoir) classes.
+%% Do not add your packages to the template, but rather add them here.
+
+%% ***************** (Your) Packages (End) *******************
+
+
+%% **************** (Your) Data (Start) ******************
+
+\title{Membrana Polimérica de Inclusión\\Para Recobro y Concentración de Litio\\A partir de Agua de Mar}  % use \\ here otherwise you get a justified title
+                                                    % note capitalization of the title (only common 
+                                                    % words in lower case)
+\tagline{Tesis de Maestría}                     % tag line
+\author{Q. Cristhian Paredes Cardona}                           % your name
+\authorID{51949049-9}                           % your University Identifier
+\supervisor{\\\textbf{Dr. Eduardo Rodríguez de San Miguel Guerrero}}                             % your supervisor(s) name - no . in Dr
+%\cosupervisor{Dr Who}                               % your cosupervisor(s) name - no . in Dr ** OPTIONAL ** 
+                                                    % simply comment out the above line if absent
+% JURADO
+\president{Dr. Joaquín Palacios Alquisira}
+\vocala{Dr.  Luis Felipe del Castillo Dávila}
+\vocalb{Dra. María del Pilar Cañizares Macias}
+\vocalc{Dra. Flora Emperatriz Mercader Trejo}
+\secretary{Dr. Julio César Aguilar Cordero}  
+\department{Programa de Maestría y Doctorado en Ciencias Químicas\\[1ex]Departamento de Química Analítica}      % your department (e.g. Artifical Intelligence)
+\faculty{Facultad de Química}                      % your faculty (e.g. ICT)
+\workplace{Laboratorio 109, Departamento de Química Analítica, División de Estudios de Posgrado, Edificio B, Facultad de Química, Ciudad Universitaria, UNAM.\\Ciudad de México, México}
+\degree{Maestro en Ciencias}                      % the degree you are reading
+                                                    % note the \ after the dot, so not to consider it a fullstop
+\doctype{Tesis}                              % the type of document (fyp, dissertation, thesis)
+\degreedate{Mayo, 2020}                        % when did you submit -- officially after your corrections !
+%%\subjectcode{ICS5200}                               % the study unit-code (currently not used)
+
+%% ***************** (Your) Data (End) *******************
+
+
+%% ******** (Your) Document Settings (Start) *************
+
+% You should have an images directory in every chapX subdir
+% NOTE:  Trailing / for subdirs is required.
+\graphicspath{{./images/}{./chap1/images/}}   % Paths where to look for images, if defined "images" must always be there as it holds the images in-use by the template.
+
+\makeindex
+
+%% ********* (Your) Document Settings (End) **************
+
+% DOCTOR'S (JP) ORDERS: MAKE SURE TO READ MY TWO BLOG ENTRIES WITH
+% CONTENT AND LaTeX TIPS FOR YOUR WRITE-UP.  THESE ARE BASED ON  
+% EXAMINER'S FEEDBACK
+%
+% URLS:
+% https://bitsilla.com/blog/2019/03/content-tips-for-your-dissertation-or-project-write-up/
+% https://bitsilla.com/blog/2019/01/latex-tips-for-your-dissertation-or-project-write-up/
+
+% end the preamble and start the document
+\usepackage{hyphenat}
+ \hyphenation{mate-máti-cas recu-perar enca-re-ci-mien-to vehí-culos manu-fac-tura volu-men pre-sen-cia pre-fe-ren-cial disuel-tos herra-mien-tas varian-za gene-ra-ción desa-rro-lla-dores varian-za con-si-de-rado proba-ble-mente ener-gé-tico volu-men ante-rior-es  acti-vi-da-des infle-xion di-lui-do estos sepa-ra-ción mine-ra-les varia-ble míni-mos desio-ni-za-da}
+ 
+
+
+\begin{document}
+\input{shapesforcaptions}
+\interfootnotelinepenalty=10000
+\renewcommand{\tablename}{Tabla}
+\renewcommand{\figurename}{Figura}
+\renewcommand{\indexname}{Índice}
+\newcommand{\ChapBib}[1]{\bibliographystyle{um-plainnat}{\footnotesize\bibliography{#1}}}
+\newsubfloat{table}
+
+
+\frontmatter 
+    \maketitle
+         %Delete hypenation: :O
+        \pretolerance=10000
+        \tolerance=2000 
+        \emergencystretch=10pt
+    \begin{copyrightenv}\end{copyrightenv}
+    \begin{juries}\end{juries}
+%    %\begin{originality}\end{originality}   
+    \input{frontmatter/dedication}        % include a dedication.tex file
+    \input{frontmatter/acknowledgements}   % include an acknowledgements.tex file
+    \input{frontmatter/abstract}\if@openright\cleardoublepage\else\clearpage\fi
+    \tableofcontents*\if@openright\cleardoublepage\else\clearpage\fi
+    \listoffigures*\if@openright\cleardoublepage\else\clearpage\fi
+    \listoftables*\if@openright\cleardoublepage\else\clearpage\fi
+    \input{frontmatter/abbreviations}\if@openright\cleardoublepage\else\clearpage\fi
+
+\pagestyle{umpage}
+\mainmatter 
+\linenumbers
+    \include{chap1/Introduction}
+    \include{chap2/Backgroung}
+    \include{chap2b/chap2b}
+    \include{chap3/Experimental}
+    \include{chap4/Transmem}
+    \include{chap5/Results}
+    \include{chap6/Conclusions}
+    \appendix
+        \include{App/Submited}
+        \include{App/FAASFAES}
+        \include{App/Tracker} 
+        \include{App/Micro}
+        \include{App/transmemManual}
+        
+
+{\backmatter
+    % Bibliography
+%    \if@openright\cleardoublepage\else\clearpage\fi
+%    \bibliographystyle{um-plainnat} %% specific plainnat does not show url for articles
+%    {\footnotesize\bibliography{chap1/introduction,
+%                                chap2/background,
+%                                chap3/experimental,
+%                                chap4/Chap4,
+%                                chap5/results,
+%                                chap6/conclusions}}
+	%\printindex
+}
+
+\end{document}
+
+%%% The End %%%

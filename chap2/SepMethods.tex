@@ -1,0 +1,110 @@
+\section{Estado del arte en el recobro de litio}\label{sec:estadodelarte}
+Un gran número de metodologías se han propuesto para la separación selectiva de ion litio. En muchos casos los métodos han sido exitosamente aplicados a muestras reales, incluyendo agua de mar. En esta sección se resumen aspectos relevantes de estas técnicas. Las \acp{PIM} son tratadas independientemente en la Sección \ref{sec:pimint}.
+
+La Tabla \ref{tab:ArtLitreports} resume algunos de los métodos recientes para la extracción de ion litio a partir de distintas matrices. De las técnicas incluidas, adsorción, intercambio iónico y electrólisis selectiva no comparten muchas características con el método propuesto en el presente trabajo. Por otro lado, la extracción con disolventes y con membranas líquidas soportadas contienen conceptos fácilmente adaptables a las \acp{PIM}. Este segundo grupo es analizado con más detalle en los siguientes apartados.
+
+\clearpage
+%\newgeometry{left=1cm, bottom=0.4cm, top=0.16cm}
+\begin{landscape}%\thispagestyle{plain}
+\centering
+\begin{table}[H]
+    \centering\footnotesize
+    \begin{tabular}{@{}p{0.07cm}llcp{12cm}l@{}}\toprule
+        &\textbf{Material o Reactivo} &\textbf{Matriz}&\textbf{Eficiencia}&\textbf{Detalles}&\textbf{Referencia} \\&&&\textbf{(\%)}\\\midrule
+        \multicolumn{3}{@{}l}{\textit{Extracción con disolventes}}\\
+        &LIX-54/Cyanex 923&Sintética&98&\textbf{Rel. mol.}: 2:1 (LIX-54:Cyanex 923). \textbf{Dil}: ShellSol D70 (Parafinas y naftenos C11-C14).\newline Efecto sinérgico entre los extractantes. & \citet{Pranolo2015}\\
+        &LIX-54/TOPO & Sintética &- & \textbf{Dil}: Queroseno.\newline Efecto sinérgico entre los extractantes.  &\citet{Kunugita1989}\\
+        &TTA/TOPO & Agua de mar & 65& \textbf{Dil}: Queroseno.\newline Efecto sinérgico entre los extractantes. El magnesio fue precipitado con \ce{NH4OH}. & \citet{Harvianto2016}\\
+        &\ce{[N4444][EHEHP]}&Sintética&95& \textbf{Dil}: Dicloroetano.&\citet{Shi2020}\\
+        &TBP&Sintética&65& \textbf{Dil}: Succinato de dietilo. \textbf{Cox}:\ce{FeCl3}. &\citet{Zhou2020}\\
+        
+        \multicolumn{3}{@{}l}{\textit{Membranas líquidas Soportadas}}\\
+        &LIX-54/TOPO& Sintética&90&\textbf{Rel. mol.}: 3:1 (LIX-54:TOPO). \textbf{Dil}: Queroseno. \textbf{Rec}: \ce{H2SO4} (1~mol~L\mnn)&\citet{Ma2000}\\
+        &D2EHPA/TBP & Sintética&82&\textbf{Dil}: Queroseno. \textbf{Rec}: \ce{HCl}  &\citet{sharma2016}\\
+        &\ce{[C4mim][NTf2]}/TPB& Sintética &70 & \textbf{Pol}:  poli(1,1-difluoroetileno). \textbf{Rec}: \ce{Na2CO3 + NaHCO3} (2~mol~L\mnn)&\cite{ZANTE2019}\\
+        
+        \multicolumn{3}{@{}l}{\textit{Adsorción e intercambio iónico}}\\
+        &\ce{H_{1.6}Mn_{1.6}O4}&Agua de mar &85&\textbf{Cap}: 40~mg~g\mnn&\citet{Chitrakar2001}\\
+        &\ce{H_{1.33}[Ti_{x}Mn_{1-x}]_{1.67}O4}&Agua de mar&-&\textbf{Cap}: 22~mg~g\mnn &\citet{RYU2019}\\
+      %  &HMO/Celulosa& & &\citet{Tang2020}\\
+        
+        \multicolumn{3}{@{}l}{\textit{Métodos electroquímicos}}\\
+        &\ce{[PP13][NTf2]}&Agua de mar & -&Electrólisis de membrana líquida soportada con líquido iónico como extractante.&\citet{Hoshino2014}\\
+        &LISICON& Agua de mar & - & Electrólisis de membrana selectiva a litio (LISICON)\newline Obtención directa de litio metálico. La celda funciona con energía solar. &\citet{Yang2018}\\
+        &CEM/BLM/CEM& Sintética & 49 &\textbf{Rec}: HCl (0.03~mol~L\mnn)\newline Electrólisis de membrana líquida (TBP) intercalada entre dos CEMs &\citet{ZHAO2020}\\
+        
+        
+        
+        \multicolumn{3}{@{}l}{\textit{Membranas poliméricas de inclusión}}\\
+        &TTA/TOPO & Sintética & &\textbf{Rel. mol.}:  2:1 (TTA:TOPO). \textbf{Rec}: HCl (0.1~mol~L\mnn)\newline La membrana pierde el 64\% de su eficiencia tras el cuarto ciclo de reuso.   &\citet{Cai2019}\\
+        &\textbf{LIX-54/Cyanex 923} & \textbf{Agua de mar} &  &\textbf{Rel. mol.}: 2.15:1 (LIX-54:Cyanex 923)  \textbf{Rec}: HCl (0.1~mol~kg\mnn) \newline La membrana pierde menos del 40\% de su eficiencia tras el décimo ciclo de reuso.&\textbf{Este trabajo}\\\bottomrule   
+        
+       
+    \end{tabular}
+    \caption{Métodos del estado del arte en extracción de litio.}
+    \label{tab:ArtLitreports}
+\end{table}
+\end{landscape}
+
+\subsection{Extracción con disolventes}\label{sec:extr.disolv}\index{Extracción!con disolventes}
+La extracción con disolventes (o extracción líquido-líquido) se fundamenta en el reparto preferencial de un soluto entre dos fases líquidas inmiscibles que se encuentran en contacto. El reparto preferencial de dicho soluto en una fase o la otra depende en parte de la solubilidad que este presenta en cada uno de los medios. Con regularidad se emplean disolventes orgánicos para extraer cationes metálicos que se encuentran en medio acuoso. La solubilidad de estos solutos es bastante baja en el medio orgánico debido a la naturaleza de los cationes y de los disolventes orgánicos. Debido a esto, usualmente se incorporan en la fase orgánica extractantes orgánicos que forman compuestos estables neutros con los cationes y favorecen su reparto. Esto se conoce como extracción facilitada. En un segundo paso, el proceso es revertido usando una nueva disolución acuosa a partir de la cual, en pasos posteriores, pueden obtenerse compuestos de alta pureza del elemento en cuestión \citep{NARBUTT2020}. La primera disolución acuosa que contiene originalmente la especie de interés es denominada fase donadora o de alimentación, mientras la segunda se llama fase receptora o de recuperación. Las etapas de la separación se conocen como extracción y recuperación, respectivamente. Las condiciones de la extracción pueden ser finamente ajustadas a tal punto que incluso se hace posible la separación isotópica de distintos elementos. \citet{LIU2018c} reportaron el uso de éteres corona para la separación isotópica de \ce{^6Li}. Este isótopo es de gran importancia para la producción de tritio (\ce{^3H}) que se emplea en algunos reactores nucleares.
+
+Los extractantes \index{Extractantes} que facilitan la extracción pueden dividirse en tres grupos principales, acorde al mecanismo de interacción con la especie que se extrae:
+\begin{itemize}
+    \item Extractantes ácidos (intercambiadores catiónicos)
+    \item Extractantes alcalinos (intercambiadores aniónicos)
+    \item Extractantes neutros (agentes solvatantes)
+\end{itemize}
+
+Los extractantes alcalinos son útiles en la extracción de especies con carga negativa. El ion litio no forma compuestos aniónicos bajo las condiciones del presente estudio, por lo que estos extractantes no son de interés en este trabajo.
+
+En los extractantes ácidos (representados como \ce{HL}), la especie de interés (\ce{M^n+}) desplaza protones ácidos que son donados al medio acuoso para formar un complejo neutro (\ce{ML_n}), que por lo general es soluble en la fase orgánica:
+\begin{equation}
+    \ce{M^{n+} + n\overline{HL} <=> \overline{ML_n} + nH^+}
+\end{equation}
+donde la barra horizontal superior denota que la especie se encuentra en la fase no acuosa. 
+
+Los agentes quelantes (\ce{B}), involucran la complejación de especies neutras (\ce{MX_n}) para formar un complejo también neutro (\ce{MX_nB_b}) que es altamente soluble en la fase orgánica:
+\begin{equation}
+    \ce{M^{n+} + nX^{-} + b\overline{B} <=> \overline{MX_nB_b}}
+\end{equation}
+En varios casos, los extractantes ácidos pueden reaccionar con el catión de interés como intercambiador catiónico y como agente solvatante, de manera simultánea \citep{Swain2016}:
+\begin{equation}
+    \ce{M^{n+} + (n + m)\overline{HL} <=> \overline{ML_n(HL)_m} + nH^+}
+\end{equation}
+
+La extracción de ion litio utilizando únicamente extractantes neutros es difícil, por lo que usualmente se requiere la adición de un anión anfifilico\footnote{Afín a ambas fases: acuosa y orgánica.} que permita la posterior solvatación del par iónico formado, por parte de la molécula extractante. \citet{Zhou2020} reportaron la utilidad del cloruro de hierro(III), que en medio acuoso con cloruros forma el complejo tetracloroferrato(III), para facilitar la solvatación de ion litio, usando un extractante orgánico neutro (TBP).
+
+Una estrategia común implica la combinación de un extractante ácido con un extractante neutro, con lo que se facilita la extracción de especies que son difíciles de extraer usando solo uno de los extractantes. Esto se conoce como efecto sinérgico y ha sido ampliamente aplicado a la extracción de ion litio \citep{Pranolo2015, Kunugita1989, Harvianto2016}. La dificultad que presentan los extractantes ácidos para extraer por sí mismos al ion litio recae en que su número de coordinación es de cuatro \citep{Kinugasa1994}, y el extractante no satisface las necesidades de coordinación del ion litio. Los espacios remanentes son ocupados con moléculas de agua, formando una esfera de hidratación que hace el complejo incompatible con la fase orgánica altamente hidrofóbica. Estos espacios disponibles en el compuesto neutro formado por la base conjugada del extractante ácido y el ion litio, pueden ser ocupados por un agente quelante lipofílico que permita la incorporación del compuesto final a la fase orgánica \citep{NARBUTT2020}.
+
+En algunos casos, la extracción con disolventes es aplicada para la extracción de los cationes calcio y magnesio que impiden la precipitación de compuestos de litio de alta pureza \citep{Shi2020b}. Este enfoque es ventajoso desde un punto de vista práctico, dado que los cationes divalentes son más fuertemente solvatados que los monovalentes y, por lo tanto, su proceso de extracción es más rápido y sencillo.
+
+\subsection{Membranas líquidas soportadas}\index{Extracción!con membranas líquidas soportadas}
+Una membrana es una barrera física semipermeable que separa dos medios. Las membranas líquidas pueden ser soportadas (membrana líquida soportada (SLM)\acused{SLM}) o no soportadas (como las membranas líquidas de bulto (BLM) \acused{BLM}). Las \ac{SLM}s consisten en un soporte polimérico poroso impregnado con un disolvente orgánico que incorpora las moléculas extractantes. El uso de estas membranas representa una evolución de la extracción por disolventes y resuelve bastantes problemas relacionados con dicha metodología. Las etapas de extracción y de recuperación se llevan a cabo simultáneamente en un proceso que involucra cantidades de disolventes y de extractantes mucho menores a los usados en la extracción con disolventes. Esto representa ventajas operacionales y ambientales muy grandes. Su versatilidad las hace muy atractivas para distintas aplicaciones. Numerosas separaciones de iones metálicos han sido logradas usando este tipo de membranas \citep{deGyves1999}.
+
+La separación de iones metálicos por medio de \ac{SLM}s puede lograrse con la adaptación de sistemas de extractantes y disolventes previamente reportados en la extracción con disolventes para el ion de interés. \citet{Ma2000} usaron en una \ac{SLM} los mismos extractantes diluidos en el mismo disolvente del sistema de extracción por disolventes reportado por \citet{Kunugita1989}. Los efectos sinérgicos entre extractantes ácidos y neutros reportados en la extracción de ion litio por disolventes, también son posibles (y muchas veces, necesarios) en la extracción usando \ac{SLM}s.
+
+El principal inconveniente que presentan las \ac{SLM}s reside en la poca estabilidad que presentan a causa de fenómenos como emulsión de la fase orgánica en las fases acuosas, o volatilización del disolvente que diluye los extractantes. Estos inconvenientes pueden ser subsanados con el uso de líquidos iónicos como extractantes \citep{ZANTE2019}, o modificando la estrategia de la separación, usando otro tipo de membranas más estables, como las membranas poliméricas de inclusión.
+
+La mayoría de los parámetros de desempeño relacionados con las \ac{SLM}s son comunes con los de las \acp{PIM} y por lo tanto, son tratados en la siguiente sección.
+%\subsection{Métodos electroquímicos}
+%\citep{Yang2018} LESS: 7828220525
+%\citep{ZHAO2019}
+
+%\subsection{Adsorción selectiva}
+%Recovery of lithium in seawater using a titanium intercalated lithium manganese oxide composite
+%Author links open overlay panelTaegongRyu
+%10.1016/j.hydromet.2018.12.012
+
+
+%\subsection{Adsorción selectiva e intercambio iónico}
+%Recurrentemente se han estudiado materiales sólidos con alta selectividad hacia el litio para la separación selectiva de este elemento a partir de salmueras y de agua de mar \cite{ARROYO2019}. Los materiales más utilizados son óxidos metálicos (principalmente de manganeso) que capturan selectivamente iones litio en su estructura cristalina o resinas de intercambio catiónico en las que el litio reemplaza posiciones ocupadas por iones hidronio. En muchos casos los adsorbentes y las resinas empleadas se encuentran disponibles comercialmente.
+
+%El protocolo involucra el contacto íntimo entre la disolución con litio (disolución de alimentación) y el adsorbente o la resina de intercambio iónico. Cuando el material sólido se ha cargado con litio al máximo de su capacidad se lava y se repite el proceso de contacto íntimo usando esta vez una disolución de recuperación generalmente compuesta de ácido clorhídrico diluido. En la segunda etapa, el litio es retirado del material sólido con lo que éste es regenerado y puede usarse nuevamente. Si se reutiliza la disolución de recuperación o si el volumen empleado es menor al de la disolución de alimentación puede concentrarse el litio y esto facilita la posterior obtención de compuestos sólidos.
+
+%Algunas variaciones involucran los materiales sólidos para retirar del medio a todos los cationes exceptuando al litio que queda en disolución. \citet{Nishihama2011} reportaron el uso secuencial de resinas de intercambio iónico para eliminar los cationes alcalinos y alcalinotérreos que podrían interferir en la precipitación de litio a partir de un concentrado de agua de mar. Luego de eliminar los interferentes el litio pudo ser precipitado usando carbonato de amonio para obtener carbonato de litio con una pureza mayor a 99.9\%.
+
+%\subsection{No se como llamar lo de acá D:0\}}
+%Innovative lithium recovery technique from seawater by using world-first dialysis with a lithium ionic superconductor
+%https://doi.org/10.1016/j.desal.2014.12.018
+

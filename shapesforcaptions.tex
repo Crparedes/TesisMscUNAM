@@ -1,0 +1,26 @@
+% Include before \begin{document}:
+% \usepackage{tikz}
+% \usetikzlibrary{shapes}
+% Load \input{shapesforcaptions.tex} after \begin{document}
+\newcommand{\circleblck}{\raisebox{0.5pt}{\tikz{\node[draw,scale=0.4,circle,fill=black](){};}}}
+\newcommand{\circlewht}{\raisebox{0.5pt}{\tikz{\node[draw,scale=0.4,circle,fill=none](){};}}}
+
+\newcommand{\squareblck}{\raisebox{0.5pt}{\tikz{\node[draw,scale=0.4,regular polygon, regular polygon sides=4,fill=black](){};}}}
+\newcommand{\squarewht}{\raisebox{0.5pt}{\tikz{\node[draw,scale=0.4,regular polygon, regular polygon sides=4,fill=none](){};}}}
+\newcommand{\squarerttdblck}{\raisebox{0.5pt}{\tikz{\node[draw,scale=0.4,regular polygon, regular polygon sides=4,fill=black,rotate=45](){};}}}
+\newcommand{\squarerttdwht}{\raisebox{0.5pt}{\tikz{\node[draw,scale=0.4,regular polygon, regular polygon sides=4,fill=none,rotate=45](){};}}}
+
+\newcommand{\triangleupblck}{\raisebox{0.5pt}{\tikz{\node[draw,scale=0.3,regular polygon, regular polygon sides=3,fill=black](){};}}}
+\newcommand{\triangleupwht}{\raisebox{0.5pt}{\tikz{\node[draw,scale=0.3,regular polygon, regular polygon sides=3,fill=none](){};}}}
+\newcommand{\triangledownblck}{\raisebox{0.5pt}{\tikz{\node[draw,scale=0.3,regular polygon, regular polygon sides=3,fill=black,rotate=180](){};}}}
+\newcommand{\triangledownwht}{\raisebox{0.5pt}{\tikz{\node[draw,scale=0.3,regular polygon, regular polygon sides=3,fill=none,rotate=180](){};}}}
+\newcommand{\trianglerigthblck}{\raisebox{0.5pt}{\tikz{\node[draw,scale=0.3,regular polygon, regular polygon sides=3,fill=black,rotate=270](){};}}}
+
+\newcommand{\starfvpointsblck}{\raisebox{0.0pt}{\tikz{\node[draw, scale = 0.85, star, star points=5, star point ratio=.35, fill=black, rotate = 180](){};}}}
+\newcommand{\starfvpointswht}{\raisebox{0.0pt}{\tikz{\node[draw, scale = 0.85, star, star points=5, star point ratio=.35, fill=white, color = white, rotate = 180](){};}}}
+
+% Inside \caption{} use \protect:
+%\caption{This is an inverted green triangle in a figure caption (\protect\triangleupblck).}
+
+
+% Fuego acustico

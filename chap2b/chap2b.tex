@@ -45,17 +45,17 @@ Cuando los parámetros $\alpha$ y $\kappa$ se mantienen constantes (Figuras \ref
 Las Figuras \ref{fig:Modelssim}(e) y (f) muestran el cambio en los perfiles de transporte cuando los parámetros $\alpha$ y $\beta$ son constantes, y cambia el parámetro $\kappa$. El comportamiento de las curvas varía principalmente en los primeros momentos del experimento. A pesar de que los parámetros $\alpha$ y $\beta$ son iguales en ambos gráficos, un valor más grande de $\kappa$ produce curvas que llegan más rápido a su valor límite pero que parecen tener un pequeño tiempo de inducción en el que el proceso de transporte se ralentiza. Esto ha sido denominado excentricidad y se ha incluido en la Ecuación \ref{eq:NLSCRIS} para permitir que el modelo abarque un mayor número de sistemas, con un ajuste satisfactorio. Dicho parámetro debe definirse y no debe ser modificado para modelar perfiles de transporte experimentales que hayan sido obtenidos bajo condiciones relativamente similares.
 
 
-Las ecuaciones que se proponen en el presente trabajo presentan algunas ventajas respecto a las propuestas en nuestro grupo de investigación hace unos años \citep{RODRIGUEZDESANMIGUEL2014}:
+Las ecuaciones que se proponen tienen algunas ventajas respecto a las propuestas en nuestro grupo de investigación hace unos años \citep{RODRIGUEZDESANMIGUEL2014}:
 \begin{itemize}
     \item Si el sistema es bien comportado (i.e.\ no hay acumulación significativa de especies en la membrana) los valores de $\alpha$ y $\beta$ son prácticamente iguales para los datos de las disoluciones de alimentación y de recuperación.
-    \item Los parámetros $\alpha$ y $\beta$ de cada disolución al ser equivalentes, pueden ser combinados entre sí usando promedios ponderados considerando su respectiva incertidumbre proveniente de la falta de ajuste del modelo \citep{borenstein2011}. Los parámetros obtenidos de esta manera pueden considerarse más robustos.
+    \item Los parámetros $\alpha$ y $\beta$ de cada disolución al ser equivalentes, pueden ser combinados entre sí usando promedios ponderados considerando su respectiva incertidumbre proveniente de la falta de ajuste del modelo \citep{borenstein2011}. Los parámetros obtenidos de esta manera pueden considerarse más robustos y su error asociado es menor.
     \item El número de parámetros que deben ser encontrados por \ac{NLS} es menor. Si el desempeño de dos modelos empíricos es prácticamente el mismo (esto puede ser juzgado por medio de las sumas de los residuales al cuadrado), usualmente se prefiere el más simple.
     \item No hay una combinación posible de parámetros en la que para un tiempo $t=0$, la fracción remanente en la disolución de alimentación sea diferente de uno o la fracción transportada hacia la fase de recuperación sea diferente de cero. Esto es consistente con lo que ocurre en el proceso de extracción.
 \end{itemize}   
 
 
 
-En el paquete de R \verb|transmem| se ha incorporado una función para obtener de manera sencilla los parámetros de regresión del modelo propuesto en el presente trabajo, y también del modelo propuesto por \citet{RODRIGUEZDESANMIGUEL2014} (ver Capítulo \ref{sec:transmem66i} y Sección Anexa \ref{sec:transmemManual}).
+En el paquete de R \verb|transmem| (ver Capítulo \ref{sec:transmem66i}) se ha incorporado una función para obtener de manera sencilla los parámetros de regresión del modelo propuesto en este trabajo, y también del modelo propuesto por \citet{RODRIGUEZDESANMIGUEL2014}. La función se llama \verb|transTrend()| y su uso se explica en la Sección Anexa \ref{sec:transmemManual}.
 
 
 \ChapBib{chap2b/chap2b}

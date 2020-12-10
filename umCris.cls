@@ -369,14 +369,15 @@ As a Master’s student, as per Regulation 58 of the General Regulations for Uni
 {\noindent\Large\bfseries\sffamily\textcolor{OxfordBlue}{Jurado Asignado por el Comité Académico}}\\[4ex]
 {\begin{tabular}{p{0.1cm}ll}
     &\textbf{PRESIDENTE:} & \@president \\[1.5ex]
-    &\textbf{VOCAL:} & \@vocala \\[1.5ex]
+    &\textbf{SECRETARIO:} & \@secretary\\[1.5ex]
     &\textbf{VOCAL:} & \@vocalb \\[1.5ex]
     &\textbf{VOCAL:} & \@vocalc \\[1.5ex]
-    &\textbf{SECRETARIO:} & \@secretary\\[1ex]
+    &\textbf{VOCAL:} & \@vocala \\[1ex]
 \end{tabular}}\\[4ex]
 
 \begin{center}
-Esta tesis fue desarrollada bajo la dirección del\textbf{\@supervisor},\\en las instalaciones del \@workplace.\\[1ex] Los resultados del presente trabajo se publicaron en el artículo\\ \textit{Desalination}, 487 (2020), 114500. \url{https://doi.org/10.1016/j.desal.2020.114500}
+Esta tesis fue desarrollada bajo la dirección del\textbf{\@supervisor},\\en las instalaciones del \@workplace.\\[1ex] Los resultados del presente trabajo se publicaron en el artículo de investigación\\ \textit{Desalination}, 487 (2020), 114500, \url{https://doi.org/10.1016/j.desal.2020.114500}\\
+y en la librería de R-CRAN\\ \textit{transmem}, v0.1.1. \url{https://CRAN.R-project.org/package=transmem}.
 
 \vspace{10ex}
 \begin{tabular}{p{0.25cm}cp{0.25cm}}
